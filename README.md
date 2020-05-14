@@ -22,4 +22,4 @@ Esse projeto para fins de estudo sobre angular consumindo uma api
 <img src="./src/assets/enviando.png"/>
 
 ### Respondendo Emails
-<img src="./src/assets/respondendo.png"/>
+<img src="../src/assets/respondendo.png"/>
