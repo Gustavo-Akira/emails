@@ -2,6 +2,18 @@
 ## Projeto
 Esse projeto para fins de estudo sobre angular consumindo uma api
 100% funcional enviando, recebendo e respondendo emails
+
+## Adendo essa api não é de minha autoria 
+
+## Funcionalidades
+### Enviar Emails
+### Receber Emails
+### Responder Emails
+### Visualizar Emails
+### Login
+### Cadastrar
+
+
 ## Telas
 ### Inicio
 <img src="./src/assets/imagens/inicial.png"/>
