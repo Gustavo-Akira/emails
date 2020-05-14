@@ -1,0 +1,19 @@
+<h3>Crie uma Conta</h3>
+<form class="ui form" [formGroup]="authForm" (submit)="onSubmit()">
+    <app-input input="text" label="Usuario" [controle]="authForm.get('username')"></app-input>
+    <app-input input="password" label="Senha" [controle]="authForm.get('password')"></app-input>
+    <app-input input="password" label="Confirme a Senha" [controle]="authForm.get('passwordConfirmation')"></app-input>
+    <div *ngIf="authForm.errors && authForm.get('passwordConfirmation').touched && authForm.get('password').touched" class="ui red basic label">
+        <p *ngIf="authForm.errors.passwordsDontMatch">
+            Erro senhas não batem
+        </p>
+        <p *ngIf="authForm.errors.noConnection">
+            Internet não detectada
+        </p>
+    </div>
+    <div>
+        <button [disabled]="authForm.invalid" class="ui submit button primary">
+            Cadatrar
+        </button>
+    </div>
+</form>

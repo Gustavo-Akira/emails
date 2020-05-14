@@ -1,0 +1,15 @@
+<h3>Logar</h3>
+<form (ngSubmit)="onSubmit()" [formGroup]="signinForm" class="ui form">
+    <app-input input="text" label="Usuario" [controle]="signinForm.get('username')"></app-input>
+    <app-input input="password" label="Senha" [controle]="signinForm.get('password')"></app-input>
+    <div *ngIf="signinForm.errors" class="ui red basic label">
+        <p *ngIf="signinForm.errors.credentials">
+            Senha ou Email inválidos
+        </p>
+    </div>
+    <div>
+        <button class="ui submit button primary" [disabled]="signinForm.invalid">
+            Logar
+        </button>
+    </div>
+</form>

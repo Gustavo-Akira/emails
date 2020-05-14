@@ -1,0 +1,30 @@
+<div class="field">
+    <label>{{label}}</label>
+    <input *ngIf="tipo === 'input'" [type]="input" [formControl]="controle"/>
+    <textarea *ngIf="tipo==='textarea'" [formControl]="controle"></textarea>
+    <div *ngIf="showErrors()" class="ui pointing red basic label">
+        <p *ngIf="controle.errors.required">
+            Esse campo é requirido
+        </p>
+        <p *ngIf="controle.errors.minlength">
+            Esse campo tem que ter no minimo {{controle.errors.minlength.requiredLength}}
+            e no momento está com {{controle.errors.minlength.actualLength}}
+        </p>
+        <p *ngIf="controle.errors.maxlength">
+            Esse campo tem que ter no máximo {{controle.errors.maxlength.requiredLength}}
+            e no momento está com {{controle.errors.maxlength.actualLength}}
+        </p>
+        <p *ngIf="controle.errors.nonUniqueUsername">
+            Usuario já existente no sistema escolha outro por favor
+        </p>
+        <p *ngIf="controle.errors.pattern">
+            Formato inválido para esse campo
+        </p>
+        <p *ngIf="controle.errors.noConnection">
+            Não consigo informa no momento se a outro usuario igual tente mais tarde
+        </p>
+        <p *ngIf="controle.errors.email">
+            Coloque um email válido
+        </p>
+    </div>
+</div>

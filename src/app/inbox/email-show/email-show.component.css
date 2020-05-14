@@ -1,0 +1,9 @@
+div.header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.self{
+    align-self: center;
+    justify-self: center;
+}

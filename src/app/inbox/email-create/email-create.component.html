@@ -1,0 +1,9 @@
+<button (click)="showModal = true" class="ui button inverted primary fluid">
+    Gerar
+</button>
+<app-modal (dimiss)="showModal = false" *ngIf="showModal">
+    <div modalTitle>Gerar</div>
+    <app-email-form (emailSubmit)="onSubmit($event)" [email]="email">
+        
+    </app-email-form>
+</app-modal>
